@@ -2,9 +2,11 @@
   <PropertyGroup>
     <Description>Opinionated F# OSS solution scaffold created by Ionide initative</Description>
     <Authors>Krzysztof Cieslak</Authors>
+    <Copyright>Copyright 2020 Lambda Factory</Copyright>
     <PackageProjectUrl>https://github.com/ionide/Waypoint</PackageProjectUrl>
     <License>MIT</License>
     <RepositoryUrl>https://github.com/ionide/Waypoint.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageIconUrl>https://ionide.io/static/images/logo.png</PackageIconUrl>
     <PackageTags>template;f#</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
