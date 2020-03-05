@@ -1,0 +1,39 @@
+source https://api.nuget.org/v3/index.json
+
+storage: none
+framework: netcoreapp3.1, netstandard2.0, netstandard2.1
+
+nuget FSharp.Core
+nuget Expecto
+nuget FsCheck 2.14.0
+nuget Expecto.FsCheck
+
+group Docs
+  source https://api.nuget.org/v3/index.json
+
+  framework: netstandard2.0
+  storage: symlink
+
+  nuget FSharp.Formatting prerelease
+  nuget Markdig
+  nuget Newtonsoft.Json
+
+// [ FAKE GROUP ]
+group Build
+  source https://api.nuget.org/v3/index.json
+
+  framework: netstandard2.0
+  storage: none
+
+  nuget Fake.Core.Target
+  nuget Fake.Core.Process
+  nuget Fake.DotNet.Cli
+  nuget Fake.Core.ReleaseNotes
+  nuget Fake.DotNet.AssemblyInfoFile
+  nuget Fake.DotNet.Paket
+  nuget Fake.Tools.Git
+  nuget Fake.Core.Environment
+  nuget Fake.Core.UserInput
+  nuget Fake.IO.FileSystem
+  nuget Fake.DotNet.MsBuild
+  nuget Fake.Api.GitHub

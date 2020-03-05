@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Waypoint</Description>
+    <Authors>Krzysztof Cieslak</Authors>
+    <PackageProjectUrl>https://github.com/ionide/Waypoint</PackageProjectUrl>
+    <License>MIT</License>
+    <RepositoryUrl>https://github.com/ionide/Waypoint.git</RepositoryUrl>
+    <PackageIconUrl>https://ionide.io/static/images/logo.png</PackageIconUrl>
+    <PackageTags>template;f#</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageType>Template</PackageType>
+    <NoBuild>true</NoBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ExcludeFromPackage>
+        Content/node_modules/**/*;
+        Content/packages/**/*;
+        Content/paket-files/**/*;
+        Content/build/**/*;
+        Content/docs/_public/**/*;
+        **/obj/**/*;
+        **/bin/**/*;
+        **/.fake/**/*;
+    </ExcludeFromPackage>
+</PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content/**/*" Exclude="$(ExcludeFromPackage)" >
+        <PackagePath>Content\</PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

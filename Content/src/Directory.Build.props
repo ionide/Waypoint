@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <Authors></Authors>
+    <Copyright></Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags></PackageTags>
+    <PackageDescription></PackageDescription>
+  </PropertyGroup>
+</Project>

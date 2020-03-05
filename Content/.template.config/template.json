@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Krzysztof Cieslak",
+    "classifications": [ "F#", "OSS" ],
+    "name": "Waypoint",
+    "tags": {
+      "language": "F#",
+      "type": "project"
+    },
+    "identity": "Waypoint",
+    "shortName": "Waypoint",
+    "sourceName": "Waypoint"
+  }
