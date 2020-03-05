@@ -1,4 +1,4 @@
-# Waypooint
+# Waypoint
 
 ## How to get started
 
@@ -74,7 +74,7 @@ Thank you for contributing!
 
 ## Contributing and copyright
 
-The project is hosted on [GitHub](TODO: ADD_LINK) where you can [report issues](TODO: ADD_LINK), fork
+The project is hosted on [GitHub](TODO: ADD_LINK) where you can report issues, fork
 the project and submit pull requests.
 
 The library is available under [MIT license](LICENSE.md), which allows modification and redistribution for both commercial and non-commercial purposes.
