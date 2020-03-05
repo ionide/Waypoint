@@ -1,4 +1,4 @@
-### 0.0.1 - 05.03.2020
+### 0.0.2 - 05.03.2020
 
 * Initial release
 * What's included:
