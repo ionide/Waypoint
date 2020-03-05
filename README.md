@@ -6,6 +6,10 @@ Sample repository is available here - https://github.com/Krzysztof-Cieslak/Sampl
 
 Sample generated documentation can be found here - http://kcieslak.io/SampleWaypoint
 
+Part of the [Ionide](http://ionide.io) initiative. You can support Ionide development on [Open Collective](https://opencollective.com/ionide).
+
+[![Open Collective](https://opencollective.com/ionide/donate/button.png?color=blue)](https://opencollective.com/ionide)
+
 ## What's included in template
 
 * Paket, FAKE, and Fornax added as `dotnet` local tools (`.config/dotnet-tools.json`)
