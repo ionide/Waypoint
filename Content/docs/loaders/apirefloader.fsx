@@ -21,7 +21,7 @@ let rec collectModules pn pu nn nu (m: Module) =
 
 
 let loader (projectRoot: string) (siteContet: SiteContents) =
-    let dll = Path.Combine(projectRoot, "..", "build", "FancyApp.dll")
+    let dll = Path.Combine(projectRoot, "..", "build", "Waypoint.dll")
     let output = MetadataFormat.Generate(dll, markDownComments = false, publicOnly = true)
 
     let allModules =
