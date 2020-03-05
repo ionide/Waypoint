@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Description>Waypoint</Description>
+    <Description>Opinionated F# OSS solution scaffold created by Ionide initative</Description>
     <Authors>Krzysztof Cieslak</Authors>
     <PackageProjectUrl>https://github.com/ionide/Waypoint</PackageProjectUrl>
     <License>MIT</License>
@@ -12,6 +12,7 @@
     <NoBuild>true</NoBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageTags>F#; Project template; Scaffolding; Opinionated; Tooling </PackageTags>
   </PropertyGroup>
   <PropertyGroup>
     <ExcludeFromPackage>
