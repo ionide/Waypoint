@@ -98,5 +98,6 @@ Target.create "Release" DoNothing
   ==> "Pack"
   ==> "ReleaseGitHub"
   ==> "Push"
+  ==> "Release"
 
 Target.runOrDefault "Pack"
