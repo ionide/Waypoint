@@ -13,7 +13,7 @@ let config = {
     description = "Description of FancyApp project"
     theme_variant = Some "blue"
     numbers_in_menu = true
-    root_url = "http://kcieslak.io/FancyApp"
+    root_url = "TODO: ADD_ROOT_LINK"
 }
 
 let loader (projectRoot: string) (siteContet: SiteContents) =
