@@ -85,7 +85,7 @@ No, it's not enough. Real world project, unlike conference demos, requires more 
 Those are instructions for developing template. For instructions regarding scaffolded project check [generated README.md file](Content/README.md)
 
 1. Make sure you've installed .Net Core version defined in [global.json](global.json)
-2. Run `dotnet tool install` to install all developer tools required to build the project
+2. Run `dotnet tool restore` to install all developer tools required to build the project
 3. Run `dotnet fake build` to build default target of [build script](build.fsx)
 
 ## How to contribute
