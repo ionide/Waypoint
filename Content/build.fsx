@@ -44,7 +44,7 @@ let isNullOrWhiteSpace = System.String.IsNullOrWhiteSpace
 let exec cmd args dir =
     let proc = 
         CreateProcess.fromRawCommandLine cmd args
-        |> CreateProcess.ensureExitCodeWithMessage (sprintf "Error while running '%s' with args: %A" cmd args)
+        |> CreateProcess.ensureExitCodeWithMessage (sprintf "Error while running '%s' with args: %s" cmd args)
     (if isNullOrWhiteSpace dir then proc 
     else proc |> CreateProcess.withWorkingDirectory dir)
     |> Proc.run
