@@ -40,20 +40,17 @@ let release = ReleaseNotes.parse (System.IO.File.ReadAllLines "RELEASE_NOTES.md"
 // Helpers
 // --------------------------------------------------------------------------------------
 let isNullOrWhiteSpace = System.String.IsNullOrWhiteSpace
+
 let exec cmd args dir =
-    if Process.execSimple( fun info ->
+    let proc = 
+        CreateProcess.fromRawCommandLine cmd args
+        |> CreateProcess.ensureExitCodeWithMessage (sprintf "Error while running '%s' with args: %s" cmd args)
+    (if isNullOrWhiteSpace dir then proc 
+    else proc |> CreateProcess.withWorkingDirectory dir)
+    |> Proc.run
+    |> ignore
 
-        { info with
-            FileName = cmd
-            WorkingDirectory =
-                if (isNullOrWhiteSpace dir) then info.WorkingDirectory
-                else dir
-            Arguments = args
-            }
-    ) System.TimeSpan.MaxValue <> 0 then
-        failwithf "Error while running '%s' with args: %s" cmd args
 let getBuildParam = Environment.environVar
-
 let DoNothing = ignore
 // --------------------------------------------------------------------------------------
 // Build Targets
