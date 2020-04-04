@@ -172,7 +172,7 @@ Target.create "Push" (fun _ ->
         match getBuildParam "nuget-key" with
         | s when not (isNullOrWhiteSpace s) -> s
         | _ -> UserInput.getUserPassword "NuGet Key: "
-    Paket.push (fun p -> { p with WorkingDir = buildDir; ApiKey = key }))
+    Paket.push (fun p -> { p with WorkingDir = nugetDir; ApiKey = key }))
 
 // --------------------------------------------------------------------------------------
 // Build order
