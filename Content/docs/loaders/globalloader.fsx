@@ -9,7 +9,7 @@ type SiteInfo = {
 }
 
 let config = {
-    title = "FancyApp"
+    title = "Waypoint"
     description = "Description of FancyApp project"
     theme_variant = Some "blue"
     numbers_in_menu = true
