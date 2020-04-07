@@ -1,3 +1,13 @@
+### 0.1.0 - 07.04.2020
+* Update build instructions [#6](https://github.com/fsharp/FsAutoComplete/pull/6) by [@ZaymonFC](https://github.com/ZaymonFC)
+* Added `.editorconfig` [#5](https://github.com/fsharp/FsAutoComplete/pull/5) by [@jbeeko](https://github.com/jbeeko)
+* Switch to Fake CreateProcessAPI [#7](https://github.com/fsharp/FsAutoComplete/pull/7) by [@jbeeko](https://github.com/jbeeko)
+* Fix link to ApiReference [#9](https://github.com/fsharp/FsAutoComplete/pull/9) by [@NicoVIII](https://github.com/NicoVIII)
+* Replace usage of "Saturn" in CONTRIBUTING.md [#8](https://github.com/fsharp/FsAutoComplete/pull/8) by [@NicoVIII](https://github.com/NicoVIII)
+* Use nugetDir for Paket.push [#10](https://github.com/fsharp/FsAutoComplete/pull/10) by [@NicoVIII](https://github.com/NicoVIII)
+* Replace "FancyApp" in documentation by "Waypoint" [#11](https://github.com/fsharp/FsAutoComplete/pull/11) by [@NicoVIII](https://github.com/NicoVIII)
+* Update Fornax version to `0.11.1`  by [@Krzysztof-Cieslak](https://github.com/Krzysztof-Cieslak)
+
 ### 0.0.2 - 05.03.2020
 
 * Initial release
