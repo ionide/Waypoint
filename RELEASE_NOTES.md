@@ -1,3 +1,12 @@
+### 0.2.0 - 18.05.2020
+* Fix div typo [#12](https://github.com/fsharp/FsAutoComplete/pull/12) by [@ChrisNikkel](https://github.com/ChrisNikkel)
+* Add ToolType to Paket.push in build.fsx [#14](https://github.com/fsharp/FsAutoComplete/pull/14) by [@NicoVIII](https://github.com/NicoVIII)
+* Add rollForward policy to global.json [#13](https://github.com/fsharp/FsAutoComplete/pull/13) by [@NicoVIII](https://github.com/NicoVIII)
+* Port latest updates from Saturn documentation by [@Krzysztof-Cieslak](https://github.com/Krzysztof-Cieslak)
+* Update Fornax version to `0.13.1` by [@Krzysztof-Cieslak](https://github.com/Krzysztof-Cieslak)
+* Update `build.fsx` script by [@Krzysztof-Cieslak](https://github.com/Krzysztof-Cieslak)
+* Add `publish` GitHub action by [@Krzysztof-Cieslak](https://github.com/Krzysztof-Cieslak)
+
 ### 0.1.0 - 07.04.2020
 * Update build instructions [#6](https://github.com/fsharp/FsAutoComplete/pull/6) by [@ZaymonFC](https://github.com/ZaymonFC)
 * Added `.editorconfig` [#5](https://github.com/fsharp/FsAutoComplete/pull/5) by [@jbeeko](https://github.com/jbeeko)
