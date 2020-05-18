@@ -4,16 +4,19 @@ type SiteInfo = {
     title: string
     description: string
     theme_variant: string option
-    numbers_in_menu: bool
     root_url: string
 }
 
 let config = {
     title = "Waypoint"
-    description = "Description of FancyApp project"
+    description = "Description of Waypoint project"
     theme_variant = Some "blue"
-    numbers_in_menu = true
-    root_url = "TODO: ADD_ROOT_LINK"
+    root_url =
+      #if WATCH
+        "http://localhost:8080/"
+      #else
+        "TODO: ADD_ROOT_LINK"
+      #endif
 }
 
 let loader (projectRoot: string) (siteContet: SiteContents) =

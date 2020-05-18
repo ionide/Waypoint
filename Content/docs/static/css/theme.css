@@ -347,8 +347,15 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border: 1px solid #ccc;
 }
 #body .padding {
-    padding: 3rem 6rem;
+    padding: 3rem 16rem;
 }
+@media only all and (max-width: 79.938em) {
+  #body .padding {
+      position: static;
+      padding: 15px 5rem;
+  }
+}
+
 @media only all and (max-width: 59.938em) {
     #body .padding {
         position: static;
@@ -1139,6 +1146,7 @@ option {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
     color: white !important;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 
 .searchbox i {
@@ -1171,3 +1179,42 @@ option {
 #logo-pic {
     height: 60px !important;
 }
+
+.submenu {
+  margin-top: 30px !important;
+  padding-left: 13px !important;
+  display: none;
+}
+
+.submenu-active {
+  display: block;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+.menu-group-link a{
+  padding-left: 10px !important;
+  border-left: 3px solid transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-group-link a:hover{
+  border-left: 3px solid #0082a7;
+}
+
+.menu-group-link-active {
+  border-left: 3px solid #0082a7;
+}
+
+
+#body-inner p {
+  margin: 0.8rem 0;
+}
+
+#body-inner pre {
+  margin: 1.2rem 0;
+}
+

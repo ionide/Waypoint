@@ -1,5 +1,6 @@
 ---
 title: Some post
+category: how-to
 menu_order: 2
 ---
 
