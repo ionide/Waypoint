@@ -84,7 +84,7 @@ let loadFile projectRoot n =
 
     let (text, content) = getContent text
 
-    let file = relative (Path.Combine(projectRoot, "content") + "\\") n
+    let file = relative (Path.Combine(projectRoot, "content") + string Path.DirectorySeparatorChar) n
     let link = Path.ChangeExtension(file, ".html")
 
     let title = config |> List.find (fun n -> n.ToLower().StartsWith "title" ) |> fun n -> n.Split(':').[1] |> trimString
