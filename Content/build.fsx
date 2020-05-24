@@ -42,10 +42,22 @@ let changelogFilename = "CHANGELOG.md"
 let changelog = Changelog.load changelogFilename
 let latestEntry = changelog.LatestEntry
 
+// Helper function to remove blank lines
+let isEmptyChange = function
+    | Changelog.Change.Added s
+    | Changelog.Change.Changed s
+    | Changelog.Change.Deprecated s
+    | Changelog.Change.Fixed s
+    | Changelog.Change.Removed s
+    | Changelog.Change.Security s
+    | Changelog.Change.Custom (_, s) ->
+        String.isNullOrWhiteSpace s.CleanedText
+
 let nugetVersion = latestEntry.NuGetVersion
 let packageReleaseNotes = sprintf "%s/blob/v%s/CHANGELOG.md" gitUrl latestEntry.NuGetVersion
 let releaseNotes =
     latestEntry.Changes
+    |> List.filter (isEmptyChange >> not)
     |> List.map (fun c -> " * " + c.ToString())
     |> String.concat "\n"
 
