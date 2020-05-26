@@ -34,4 +34,5 @@ let footer (ctx : SiteContents)  =
         script [] [
           !! "hljs.initHighlightingOnLoad()"
         ]
+        script [Src (rootUrl + "/static/js/tips.js")] []
     ]
