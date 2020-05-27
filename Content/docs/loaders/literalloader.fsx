@@ -36,7 +36,6 @@ let getContent' (fileContent : string) (fn: string) =
 
     let content = content |> Array.skip 1 |> String.concat "\n"
     let doc = Literate.ParseScriptFile fn
-    printfn "%A" doc.Paragraphs
     let ps =
          doc.Paragraphs
         |> List.skip 3 //Skip opening ---, config content, and closing ---

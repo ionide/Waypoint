@@ -1,7 +1,7 @@
 ---
 title: Diagrams
 category: how-to
-menu_order: 1
+menu_order: 3
 ---
 
 Some interesting diagram

@@ -2,7 +2,7 @@
 ---
 category: how-to
 title: Sample sample
-menu_order: 3
+menu_order: 2
 
 ---
 *)
@@ -13,8 +13,6 @@ Literate script
 
 This file demonstrates how to write literate F# script
 files (`*.fsx`) that can be transformed into nice HTML
-using the `literate.fsx` script from the [F# Formatting
-package](http://fsprojects.github.io/FSharp.Formatting).
 
 As you can see, a comment starting with double asterisk
 is treated as part of the document and is transformed

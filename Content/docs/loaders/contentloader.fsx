@@ -1,8 +1,10 @@
 open System
 #r "../_lib/Fornax.Core.dll"
-#r "../../packages/docs/Markdig/lib/netstandard2.0/Markdig.dll"
+#r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.CodeFormat.dll"
+#r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.Markdown.dll"
+#r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.Literate.dll"
 
-open Markdig
+open FSharp.Literate
 open System.IO
 
 type PostConfig = {
@@ -38,11 +40,7 @@ type Post = {
 }
 
 
-let markdownPipeline =
-    MarkdownPipelineBuilder()
-        .UsePipeTables()
-        .UseGridTables()
-        .Build()
+
 
 let isSeparator (input : string) =
     input.StartsWith "---"
@@ -60,14 +58,20 @@ let getConfig (fileContent : string) =
 
 ///`fileContent` - content of page to parse. Usually whole content of `.md` file
 ///returns HTML version of content of the page
-let getContent (fileContent : string) =
+let getContent (fileContent : string) (fn: string) =
     let fileContent = fileContent.Split '\n'
     let fileContent = fileContent |> Array.skip 1 //First line must be ---
     let indexOfSeperator = fileContent |> Array.findIndex isSeparator
     let _, content = fileContent |> Array.splitAt indexOfSeperator
 
     let content = content |> Array.skip 1 |> String.concat "\n"
-    content, Markdown.ToHtml(content, markdownPipeline)
+    let doc = Literate.ParseMarkdownFile fn
+    let ps =
+         doc.Paragraphs
+        |> List.skip 3 //Skip opening ---, config content, and closing ---
+    let doc = doc.With(paragraphs = ps)
+    let html = Literate.WriteHtml(doc, lineNumbers = false)
+    content, html
 
 let trimString (str : string) =
     str.Trim().TrimEnd('"').TrimStart('"')
@@ -82,7 +86,7 @@ let loadFile projectRoot n =
 
     let config = (getConfig text).Split( '\n') |> List.ofArray
 
-    let (text, content) = getContent text
+    let (text, content) = getContent text n
 
     let file = relative (Path.Combine(projectRoot, "content") + string Path.DirectorySeparatorChar) n
     let link = Path.ChangeExtension(file, ".html")
