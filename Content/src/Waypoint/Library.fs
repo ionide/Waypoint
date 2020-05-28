@@ -4,6 +4,11 @@
 module Say =
 
     ///Some comment on the function
+    ///
+    /// ```
+    /// let sample = hello "Chris"
+    /// sample = "Hello Chris"
+    /// ```
     let hello name =
         printfn "Hello %s" name
 
