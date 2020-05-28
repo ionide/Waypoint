@@ -1,6 +1,8 @@
 #r "../_lib/Fornax.Core.dll"
-#r "../../packages/docs/Markdig/lib/netstandard2.0/Markdig.dll"
 #r "../../packages/docs/Newtonsoft.Json/lib/netstandard2.0/Newtonsoft.Json.dll"
+#r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.CodeFormat.dll"
+#r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.Markdown.dll"
+#r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.Literate.dll"
 #r "../../packages/docs/FSharp.Formatting/lib/netstandard2.0/FSharp.MetadataFormat.dll"
 
 #if !FORNAX
@@ -13,20 +15,15 @@ open System
 open FSharp.MetadataFormat
 open Html
 open Apirefloader
-open Markdig
+open FSharp.Literate
 
-let markdownPipeline =
-    MarkdownPipelineBuilder()
-        .UsePipeTables()
-        .UseGridTables()
-        .Build()
-
-let getComment (c: Comment) =
+let getComment (c: Comment) : string =
   let t =
     c.RawData
     |> List.map (fun n -> n.Value)
     |> String.concat "\n\n"
-  Markdown.ToHtml(t, markdownPipeline)
+  let doc = Literate.ParseMarkdownString t
+  Literate.WriteHtml(doc, lineNumbers = false)
 
 
 let formatMember (m: Member) =

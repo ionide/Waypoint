@@ -15,7 +15,6 @@ group Docs
   storage: symlink
 
   nuget FSharp.Formatting ~> 4.0
-  nuget Markdig
   nuget Newtonsoft.Json
 
 // [ FAKE GROUP ]
