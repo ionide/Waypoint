@@ -6,6 +6,7 @@ open System
 
 open FSharp.Literate
 open System.IO
+open FSharp.CodeFormat
 
 type PostConfig = {
     disableLiveRefresh: bool
@@ -39,6 +40,33 @@ type Post = {
     category: PostCategory
 }
 
+let tokenToCss (x: TokenKind) =
+    match x with
+    | TokenKind.Keyword -> "hljs-keyword"
+    | TokenKind.String -> "hljs-string"
+    | TokenKind.Comment -> "hljs-comment"
+    | TokenKind.Identifier -> "hljs-function"
+    | TokenKind.Inactive -> ""
+    | TokenKind.Number -> "hljs-number"
+    | TokenKind.Operator -> "hljs-keyword"
+    | TokenKind.Punctuation -> "hljs-keyword"
+    | TokenKind.Preprocessor -> "hljs-comment"
+    | TokenKind.Module -> "hljs-type"
+    | TokenKind.ReferenceType -> "hljs-type"
+    | TokenKind.ValueType -> "hljs-type"
+    | TokenKind.Interface -> "hljs-type"
+    | TokenKind.TypeArgument -> "hljs-type"
+    | TokenKind.Property -> "hljs-function"
+    | TokenKind.Enumeration -> "hljs-type"
+    | TokenKind.UnionCase -> "hljs-type"
+    | TokenKind.Function -> "hljs-function"
+    | TokenKind.Pattern -> "hljs-function"
+    | TokenKind.MutableVar -> "hljs-symbol"
+    | TokenKind.Disposable -> "hljs-symbol"
+    | TokenKind.Printf -> "hljs-regexp"
+    | TokenKind.Escaped -> "hljs-regexp"
+    | TokenKind.Default -> ""
+
 
 
 
@@ -70,7 +98,8 @@ let getContent (fileContent : string) (fn: string) =
          doc.Paragraphs
         |> List.skip 3 //Skip opening ---, config content, and closing ---
     let doc = doc.With(paragraphs = ps)
-    let html = Literate.WriteHtml(doc, lineNumbers = false)
+    let html = Literate.WriteHtml(doc, lineNumbers = false, tokenKindToCss = tokenToCss)
+                       .Replace("lang=\"fsharp", "class=\"language-fsharp")
     content, html
 
 let trimString (str : string) =

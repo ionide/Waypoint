@@ -14,7 +14,8 @@ group Docs
   framework: netstandard2.0
   storage: symlink
 
-  nuget FSharp.Formatting ~> 4.0
+  nuget FSharp.Compiler.Service ~> 35.0
+  nuget FSharp.Formatting ~> 4.1
   nuget Newtonsoft.Json
 
 // [ FAKE GROUP ]

@@ -16,6 +16,35 @@ open FSharp.MetadataFormat
 open Html
 open Apirefloader
 open FSharp.Literate
+open FSharp.CodeFormat
+
+let tokenToCss (x: TokenKind) =
+    match x with
+    | TokenKind.Keyword -> "hljs-keyword"
+    | TokenKind.String -> "hljs-string"
+    | TokenKind.Comment -> "hljs-comment"
+    | TokenKind.Identifier -> "hljs-function"
+    | TokenKind.Inactive -> ""
+    | TokenKind.Number -> "hljs-number"
+    | TokenKind.Operator -> "hljs-keyword"
+    | TokenKind.Punctuation -> "hljs-keyword"
+    | TokenKind.Preprocessor -> "hljs-comment"
+    | TokenKind.Module -> "hljs-type"
+    | TokenKind.ReferenceType -> "hljs-type"
+    | TokenKind.ValueType -> "hljs-type"
+    | TokenKind.Interface -> "hljs-type"
+    | TokenKind.TypeArgument -> "hljs-type"
+    | TokenKind.Property -> "hljs-function"
+    | TokenKind.Enumeration -> "hljs-type"
+    | TokenKind.UnionCase -> "hljs-type"
+    | TokenKind.Function -> "hljs-function"
+    | TokenKind.Pattern -> "hljs-function"
+    | TokenKind.MutableVar -> "hljs-symbol"
+    | TokenKind.Disposable -> "hljs-symbol"
+    | TokenKind.Printf -> "hljs-regexp"
+    | TokenKind.Escaped -> "hljs-regexp"
+    | TokenKind.Default -> ""
+
 
 let getComment (c: Comment) : string =
   let t =
@@ -23,7 +52,8 @@ let getComment (c: Comment) : string =
     |> List.map (fun n -> n.Value)
     |> String.concat "\n\n"
   let doc = Literate.ParseMarkdownString t
-  Literate.WriteHtml(doc, lineNumbers = false)
+  Literate.WriteHtml(doc, lineNumbers = false, tokenKindToCss = tokenToCss)
+          .Replace("lang=\"fsharp", "class=\"language-fsharp")
 
 
 let formatMember (m: Member) =
