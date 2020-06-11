@@ -150,7 +150,7 @@ let loadFile projectRoot n =
       text = text
       category = category }
 
-let loader (projectRoot: string) (siteContet: SiteContents) =
+let loader (projectRoot: string) (siteContent: SiteContents) =
     try
         let postsPath = System.IO.Path.Combine(projectRoot, "content")
         let posts =
@@ -159,11 +159,11 @@ let loader (projectRoot: string) (siteContet: SiteContents) =
             |> Array.map (loadFile projectRoot)
 
         posts
-        |> Array.iter (fun p -> siteContet.Add p)
+        |> Array.iter siteContent.Add
 
-        siteContet.Add({disableLiveRefresh = true})
+        siteContent.Add({disableLiveRefresh = true})
     with
     | ex -> printfn "EX: %A" ex
 
-    siteContet
+    siteContent
 

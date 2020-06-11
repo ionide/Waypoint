@@ -27,7 +27,7 @@ let rec collectModules pn pu nn nu (m: Module) =
     ]
 
 
-let loader (projectRoot: string) (siteContet: SiteContents) =
+let loader (projectRoot: string) (siteContent: SiteContents) =
     try
       let dlls =
         [
@@ -38,7 +38,8 @@ let loader (projectRoot: string) (siteContet: SiteContents) =
           Path.Combine (projectRoot, "..", "build")
         ]
       for (label, dll) in dlls do
-        let output = MetadataFormat.Generate(dll, markDownComments = true, publicOnly = true, libDirs = libs)
+        let properties = ["project-name", label]
+        let output = MetadataFormat.Generate(dll, markDownComments = true, publicOnly = true, libDirs = libs, parameters = properties)
 
         let allModules =
             output.AssemblyGroup.Namespaces
@@ -64,9 +65,9 @@ let loader (projectRoot: string) (siteContet: SiteContents) =
           Types = allTypes
           GeneratorOutput = output
         }
-        siteContet.Add entities
+        siteContent.Add entities
     with
     | ex ->
       printfn "%A" ex
 
-    siteContet
+    siteContent
