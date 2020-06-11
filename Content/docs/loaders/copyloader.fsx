@@ -3,7 +3,7 @@
 open System.IO
 
 
-let loader (projectRoot: string) (siteContet: SiteContents) =
+let loader (projectRoot: string) (siteContent: SiteContents) =
     let intputPath = Path.Combine(projectRoot, "static")
     let outputPath = Path.Combine(projectRoot, "_public", "static")
     if Directory.Exists outputPath then Directory.Delete(outputPath, true)
@@ -19,4 +19,4 @@ let loader (projectRoot: string) (siteContet: SiteContents) =
     let outputPath = Path.Combine(projectRoot, "_public", "index.html")
     File.Copy(intputPath, outputPath, true)
 
-    siteContet
+    siteContent
