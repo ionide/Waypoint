@@ -23,7 +23,7 @@ let config = {
       #if WATCH
         Root "//localhost:8080/"
       #else
-        Root "TODO: ADD_ROOT_LINK"
+        Root "{DOCSROOTLINK}"
       #endif
 }
 

@@ -40,6 +40,12 @@
             "type": "parameter",
             "replaces": "{GITOWNER}",
             "defaultValue": "TODO: ADD_AUTHOR"
+        },
+        "docsRootLink": {
+            "description": "Root link for deployed documentation (e.g. username.github.io/repoName)",
+            "type": "parameter",
+            "replaces": "{DOCSROOTLINK}",
+            "defaultValue": "TODO: ADD_ROOT_LINK"
         }
     }
 }
