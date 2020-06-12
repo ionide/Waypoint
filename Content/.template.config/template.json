@@ -30,7 +30,7 @@
             "defaultValue": "TODO: Add package tags"
         },
         "copyright": {
-            "description": "Copyright fort the project",
+            "description": "Copyright for the project",
             "type": "parameter",
             "replaces": "{COPYRIGHT}",
             "defaultValue": "TODO: Add copyright"
