@@ -7,3 +7,5 @@ bin/
 release.cmd
 .ionide/
 build/
+/.vs/
+/Content/.vs/

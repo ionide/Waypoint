@@ -19,12 +19,12 @@ open Fake.Api
 
 let project = "Waypoint"
 
-let summary = "TODO: Add Summary"
-let authors = "TODO: Add Authors"
-let tags = "TODO: Add package tags"
-let copyright = "TODO: Add copyright"
+let summary = "{SUMMARY}"
+let authors = "{AUTHORS}"
+let tags = "{PACKAGETAGS}"
+let copyright = "{COPYRIGHT}"
 
-let gitOwner = "TODO: ADD_AUTHOR"
+let gitOwner = "{GITOWNER}"
 let gitName = "Waypoint"
 let gitHome = "https://github.com/" + gitOwner
 let gitUrl = gitHome + "/" + gitName
