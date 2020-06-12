@@ -4,10 +4,42 @@
     "classifications": [ "F#", "OSS" ],
     "name": "Waypoint",
     "tags": {
-      "language": "F#",
-      "type": "project"
+        "language": "F#",
+        "type": "project"
     },
     "identity": "Waypoint",
     "shortName": "Waypoint",
-    "sourceName": "Waypoint"
-  }
+    "sourceName": "Waypoint",
+    "symbols": {
+        "summary": {
+            "description": "A summary for your project, will be displayed for the nuget package",
+            "type": "parameter",
+            "replaces": "{SUMMARY}",
+            "defaultValue": "TODO: Add Summary"
+        },
+        "authors": {
+            "description": "Authors of the library, will be displayed for the nuget package",
+            "type": "parameter",
+            "replaces": "{AUTHORS}",
+            "defaultValue": "TODO: Add Authors"
+        },
+        "packageTags": {
+            "description": "Tags for the generated nuget package",
+            "type": "parameter",
+            "replaces": "{PACKAGETAGS}",
+            "defaultValue": "TODO: Add package tags"
+        },
+        "copyright": {
+            "description": "Copyright fort the project",
+            "type": "parameter",
+            "replaces": "{COPYRIGHT}",
+            "defaultValue": "TODO: Add copyright"
+        },
+        "gitOwner": {
+            "description": "The name of the organization or github user that owns the github repo",
+            "type": "parameter",
+            "replaces": "{GITOWNER}",
+            "defaultValue": "TODO: ADD_AUTHOR"
+        }
+    }
+}
