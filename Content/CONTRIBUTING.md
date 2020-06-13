@@ -85,11 +85,11 @@ in order to craft an excellent pull request:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/Waypoint
+   git clone https://github.com/<your-username>/`TODO: ADD_PROJECT_NAME`
    # Navigate to the newly cloned directory
    cd Waypoint
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/<project-username>/Waypoint
+   git remote add upstream https://github.com/`TODO: ADD_GIT_OWNER`/`TODO: ADD_PROJECT_NAME`
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream, and update your fork:
@@ -122,7 +122,7 @@ in order to craft an excellent pull request:
 
    ```bash
    dotnet tool restore
-   dotnet tool build
+   dotnet fake build
    ```
 
 6. Push your topic branch up to your fork:
