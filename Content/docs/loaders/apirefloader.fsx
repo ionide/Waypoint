@@ -31,7 +31,7 @@ let loader (projectRoot: string) (siteContent: SiteContents) =
     try
       let dlls =
         [
-          "Waypoint", Path.Combine(projectRoot, "..", "build", "Waypoint.dll")
+          "{PROJECTNAME}", Path.Combine(projectRoot, "..", "build", "{PROJECTNAME}.dll")
         ]
       let libs =
         [

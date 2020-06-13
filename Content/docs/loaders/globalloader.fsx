@@ -16,8 +16,8 @@ type SiteInfo = {
 }
 
 let config = {
-    title = "Waypoint"
-    description = "Description of Waypoint project"
+    title = "{PROJECTNAME}"
+    description = "Description of {PROJECTNAME} project"
     theme_variant = Some "blue"
     root_url =
       #if WATCH

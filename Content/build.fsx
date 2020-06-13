@@ -17,8 +17,6 @@ open Fake.Api
 // Information about the project to be used at NuGet and in AssemblyInfo files
 // --------------------------------------------------------------------------------------
 
-let project = "Waypoint"
-
 let summary = "{SUMMARY}"
 let authors = "{AUTHORS}"
 let tags = "{PACKAGETAGS}"
@@ -90,7 +88,7 @@ Target.create "Build" (fun _ ->
 )
 
 Target.create "Test" (fun _ ->
-    exec "dotnet"  @"run --project .\tests\Waypoint.UnitTests\Waypoint.UnitTests.fsproj" "."
+    exec "dotnet" @"run --project .\tests\{PROJECTNAME}.UnitTests\{PROJECTNAME}.UnitTests.fsproj" "."
 )
 
 Target.create "Docs" (fun _ ->
@@ -107,7 +105,7 @@ Target.create "BuildRelease" (fun _ ->
             OutputPath = Some buildDir
             MSBuildParams = { p.MSBuildParams with Properties = [("Version", nugetVersion); ("PackageReleaseNotes", packageReleaseNotes)]}
         }
-    ) "Waypoint.sln"
+    ) "{PROJECTNAME}.sln"
 )
 
 
@@ -133,7 +131,7 @@ Target.create "Pack" (fun _ ->
             OutputPath = Some nugetDir
             MSBuildParams = { p.MSBuildParams with Properties = properties}
         }
-    ) "Waypoint.sln"
+    ) "{PROJECTNAME}.sln"
 )
 
 Target.create "ReleaseGitHub" (fun _ ->

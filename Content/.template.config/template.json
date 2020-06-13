@@ -11,6 +11,13 @@
     "shortName": "Waypoint",
     "sourceName": "Waypoint",
     "symbols": {
+        "projectName": {
+            "description": "The name for your project.",
+            "type": "parameter",
+            "replaces": "{PROJECTNAME}",
+            "defaultValue": "TODO: Add Project Name",
+            "FileRename": "ProjectName"
+        },
         "summary": {
             "description": "A summary for your project, will be displayed for the nuget package",
             "type": "parameter",
