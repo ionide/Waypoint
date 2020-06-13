@@ -1,4 +1,4 @@
-﻿namespace Waypoint
+﻿namespace {PROJECTNAME}
 
 ///Some comment on the module
 module Say =

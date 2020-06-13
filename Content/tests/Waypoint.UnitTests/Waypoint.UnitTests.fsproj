@@ -4,8 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Waypoint\Waypoint.fsproj">
-      <Name>Waypoint.fsproj</Name>
+    <ProjectReference Include="..\..\src\{PROJECTNAME}\{PROJECTNAME}.fsproj">
+      <Name>{PROJECTNAME}.fsproj</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ---
-title: Waypoint Overview
+title: {PROJECTNAME} Overview
 category: explanation
 menu_order: 1
 ---
 
-# Waypoint
+# {PROJECTNAME}
