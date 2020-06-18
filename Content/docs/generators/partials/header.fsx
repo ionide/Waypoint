@@ -25,6 +25,7 @@ let header (ctx : SiteContents) page =
         link [Rel "stylesheet"; Href "//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"]
         link [Rel "stylesheet"; Href "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/atom-one-dark.min.css"]
         link [Rel "stylesheet"; Href "//cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.css"]
+        link [Rel "stylesheet"; Href "//fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"]
 
         if siteInfo.theme_variant.IsSome then
             link [Rel "stylesheet"; Href (rootUrl.subRoutef "/static/css/theme-%s.css" siteInfo.theme_variant.Value)]

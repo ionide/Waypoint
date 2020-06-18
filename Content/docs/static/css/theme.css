@@ -737,16 +737,14 @@
     font-weight: 200;
 }
 @font-face {
-    font-family: 'Work Sans';
+    font-family: 'Work Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
-    src: url("../fonts/Work_Sans_300.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_300.woff") format("woff"), url("../fonts/Work_Sans_300.woff2") format("woff2"), url("../fonts/Work_Sans_300.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_300.ttf") format("truetype");
 }
 @font-face {
-    font-family: 'Work Sans';
+    font-family: 'Work Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
-    src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype");
 }
 body {
     background: #fff;
