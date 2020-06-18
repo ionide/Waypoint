@@ -26,6 +26,7 @@ let footer (ctx : SiteContents)  =
         script [Src (rootUrl.subRoute "/static/js/learn.js")] []
         script [Src (rootUrl.subRoute "/static/js/hugo-learn.js")] []
 
+        script [Src "//cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"] []
