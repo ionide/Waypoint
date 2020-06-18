@@ -729,23 +729,8 @@
 .button:active, .button-secondary:active {
     margin: 2px 0 -2px 0;
 }
-@font-face {
-    font-family: 'Novacento Sans Wide';
-    src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
-    src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-UltraLight-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg");
-    font-style: normal;
-    font-weight: 200;
-}
-@font-face {
-    font-family: 'Work Sans', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-}
-@font-face {
-    font-family: 'Work Sans', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-}
+
+
 body {
     background: #fff;
     color: #777;
@@ -1176,7 +1161,7 @@ h2, h3, h4, h5, h6 {
     letter-spacing: -1px;
 }
 h1 {
-    font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-align: center;
     text-transform: uppercase;
     color: #222;
@@ -1836,10 +1821,11 @@ pre .copy-to-clipboard:hover {
 }
 
 #sidebar #shortcuts h3 {
-    font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     color: white ;
     margin-top:1rem;
     padding-left: 1rem;
+    font-weight: 200;
 }
 
 #searchResults {
@@ -1851,10 +1837,11 @@ option {
 }
 
 #logo {
-    font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
     color: white !important;
     margin-bottom: 0;
     text-transform: uppercase;
+    font-weight: 200;
 }
 
 .searchbox i {
