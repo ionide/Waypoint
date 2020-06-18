@@ -28,11 +28,11 @@ let footer (ctx : SiteContents)  =
         script [Src (rootUrl.subRoute "/static/js/hugo-learn.js")] []
         link [Rel "stylesheet"; Href (rootUrl.subRoute "/static/mermaid/mermaid.css")]
         script [Src (rootUrl.subRoute "/static/mermaid/mermaid.js")] []
-        script [] [!! "mermaid.initialize({ startOnLoad: true });"]
+        script [Src (rootUrl.subRoute "/static/js/tips.js")] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/fsharp.min.js"] []
         script [] [
           !! "hljs.initHighlightingOnLoad()"
         ]
-        script [Src (rootUrl.subRoute "/static/js/tips.js")] []
+        script [] [!! "mermaid.initialize({ startOnLoad: true });"]
     ]

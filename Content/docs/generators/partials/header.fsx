@@ -17,7 +17,7 @@ let header (ctx : SiteContents) page =
         title [] [!! (siteInfo.title + " | " + page)]
         link [Rel "icon"; Type "image/png"; Sizes "32x32"; Href (rootUrl.subRoute "/static/images/favicon.png")]
         link [Rel "stylesheet"; Href (rootUrl.subRoute "/static/css/nucleus.css")]
-        link [Rel "stylesheet"; Href (rootUrl.subRoute "/static/css/fontawesome-all.min.css")]
+        link [Rel "stylesheet"; Href "//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"]
         link [Rel "stylesheet"; Href (rootUrl.subRoute "/static/css/hybrid.css")]
         link [Rel "stylesheet"; Href (rootUrl.subRoute "/static/css/featherlight.min.css")]
         link [Rel "stylesheet"; Href (rootUrl.subRoute "/static/css/perfect-scrollbar.min.css")]
