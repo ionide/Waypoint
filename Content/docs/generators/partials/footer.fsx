@@ -18,8 +18,6 @@ let footer (ctx : SiteContents)  =
             div [Custom("style", "border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;")] []
         ]
         script [Src (rootUrl.subRoute "/static/js/clipboard.min.js")] []
-        script [Src (rootUrl.subRoute "/static/js/perfect-scrollbar.min.js")] []
-        script [Src (rootUrl.subRoute "/static/js/perfect-scrollbar.jquery.min.js")] []
         script [Src (rootUrl.subRoute "/static/js/jquery.sticky.js")] []
 
         script [Src (rootUrl.subRoute "/static/js/modernizr.custom-3.6.0.js")] []

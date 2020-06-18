@@ -1,3 +1,5 @@
+var ps;
+
 // Scrollbar Width function
 function getScrollBarWidth() {
     var inner = document.createElement('p');
@@ -27,7 +29,7 @@ function getScrollBarWidth() {
 
 function setMenuHeight() {
     $('#sidebar .highlightable').height($('#sidebar').innerHeight() - $('#header-wrapper').height() - 40);
-    $('#sidebar .highlightable').perfectScrollbar('update');
+    ps.update();
 }
 
 function fallbackMessage(action) {
@@ -90,7 +92,7 @@ jQuery(document).ready(function() {
     });
 
     var sidebarStatus = searchStatus = 'open';
-    $('#sidebar .highlightable').perfectScrollbar();
+    ps = new PerfectScrollbar('#sidebar .highlightable')
     setMenuHeight();
 
     jQuery('#overlay').on('click', function() {
