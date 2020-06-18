@@ -129,7 +129,7 @@ let menu (ctx : SiteContents) (page: string) =
         span  [Custom ("data-search-clear", "")] [i [Class "fas fa-times"] []]
       ]
       script [Type "text/javascript"; Src "//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js"] []
-      script [Type "text/javascript"; Src (rootUrl.subRoute "/static/js/auto-complete.js")] []
+      script [Type "text/javascript"; Src "//cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"] []
       script [Type "text/javascript";] [!! (sprintf "var baseurl ='%s'" (rootUrl.subRoute ""))]
       script [Type "text/javascript"; Src (rootUrl.subRoute "/static/js/search.js")] []
     ]
