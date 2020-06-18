@@ -29,5 +29,6 @@ let header (ctx : SiteContents) page =
 
         if siteInfo.theme_variant.IsSome then
             link [Rel "stylesheet"; Href (rootUrl.subRoutef "/static/css/theme-%s.css" siteInfo.theme_variant.Value)]
-        script [Src (rootUrl.subRoute "/static/js/jquery-3.3.1.min.js")] []
+
+        script [Src "//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"] []
     ]
