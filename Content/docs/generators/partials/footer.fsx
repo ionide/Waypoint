@@ -21,7 +21,7 @@ let footer (ctx : SiteContents)  =
         script [Src (rootUrl.subRoute "/static/js/perfect-scrollbar.min.js")] []
         script [Src (rootUrl.subRoute "/static/js/perfect-scrollbar.jquery.min.js")] []
         script [Src (rootUrl.subRoute "/static/js/jquery.sticky.js")] []
-        script [Src (rootUrl.subRoute "/static/js/featherlight.min.js")] []
+        script [Src "//cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"] []
 
         script [Src (rootUrl.subRoute "/static/js/modernizr.custom-3.6.0.js")] []
         script [Src (rootUrl.subRoute "/static/js/learn.js")] []
