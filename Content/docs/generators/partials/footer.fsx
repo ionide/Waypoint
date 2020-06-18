@@ -19,8 +19,7 @@ let footer (ctx : SiteContents)  =
         ]
 
         script [Src (rootUrl.subRoute "/static/js/modernizr.custom-3.6.0.js")] []
-        script [Src (rootUrl.subRoute "/static/js/learn.js")] []
-        script [Src (rootUrl.subRoute "/static/js/hugo-learn.js")] []
+        script [Src (rootUrl.subRoute "/static/js/scripts.js")] []
 
         script [Src "//cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"] []
