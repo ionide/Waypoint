@@ -17,13 +17,13 @@ let footer (ctx : SiteContents)  =
         div [Custom("style", "left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;")] [
             div [Custom("style", "border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;")] []
         ]
-        script [Src (rootUrl.subRoute "/static/js/clipboard.min.js")] []
         script [Src (rootUrl.subRoute "/static/js/jquery.sticky.js")] []
 
         script [Src (rootUrl.subRoute "/static/js/modernizr.custom-3.6.0.js")] []
         script [Src (rootUrl.subRoute "/static/js/learn.js")] []
         script [Src (rootUrl.subRoute "/static/js/hugo-learn.js")] []
 
+        script [Src "//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"] []
         script [Src "//cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.min.js"] []
