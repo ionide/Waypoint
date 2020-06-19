@@ -23,7 +23,7 @@ let tags = "{PACKAGETAGS}"
 let copyright = "{COPYRIGHT}"
 
 let gitOwner = "{GITOWNER}"
-let gitName = "Waypoint"
+let gitName = "{PROJECTNAME}"
 let gitHome = "https://github.com/" + gitOwner
 let gitUrl = gitHome + "/" + gitName
 
