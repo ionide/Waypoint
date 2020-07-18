@@ -89,7 +89,7 @@ in order to craft an excellent pull request:
    # Navigate to the newly cloned directory
    cd {PROJECTNAME}
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/`TODO: ADD_GIT_OWNER`/{PROJECTNAME}
+   git remote add upstream https://github.com/{GITOWNER}/{PROJECTNAME}
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream, and update your fork:
