@@ -23,7 +23,7 @@ let tags = "{PACKAGETAGS}"
 let copyright = "{COPYRIGHT}"
 
 let gitOwner = "{GITOWNER}"
-let gitName = "{PROJECTNAME}"
+let gitName = "Waypoint"
 let gitHome = "https://github.com/" + gitOwner
 let gitUrl = gitHome + "/" + gitName
 
@@ -88,7 +88,7 @@ Target.create "Build" (fun _ ->
 )
 
 Target.create "Test" (fun _ ->
-    exec "dotnet" @"run --project .\tests\{PROJECTNAME}.UnitTests\{PROJECTNAME}.UnitTests.fsproj" "."
+    exec "dotnet" @"run --project .\tests\Waypoint.UnitTests\Waypoint.UnitTests.fsproj" "."
 )
 
 Target.create "Docs" (fun _ ->
@@ -105,7 +105,7 @@ Target.create "BuildRelease" (fun _ ->
             OutputPath = Some buildDir
             MSBuildParams = { p.MSBuildParams with Properties = [("Version", nugetVersion); ("PackageReleaseNotes", packageReleaseNotes)]}
         }
-    ) "{PROJECTNAME}.sln"
+    ) "Waypoint.sln"
 )
 
 
@@ -131,7 +131,7 @@ Target.create "Pack" (fun _ ->
             OutputPath = Some nugetDir
             MSBuildParams = { p.MSBuildParams with Properties = properties}
         }
-    ) "{PROJECTNAME}.sln"
+    ) "Waypoint.sln"
 )
 
 Target.create "ReleaseGitHub" (fun _ ->

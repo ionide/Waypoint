@@ -2,16 +2,16 @@
 namespace System
 open System.Reflection
 
-[<assembly: AssemblyTitleAttribute("{PROJECTNAME}.Cli")>]
-[<assembly: AssemblyProductAttribute("{PROJECTNAME}")>]
+[<assembly: AssemblyTitleAttribute("Waypoint.Cli")>]
+[<assembly: AssemblyProductAttribute("Waypoint")>]
 [<assembly: AssemblyDescriptionAttribute("")>]
 [<assembly: AssemblyVersionAttribute("0.0.1")>]
 [<assembly: AssemblyFileVersionAttribute("0.0.1")>]
 do ()
 
 module internal AssemblyVersionInformation =
-    let [<Literal>] AssemblyTitle = "{PROJECTNAME}.Cli"
-    let [<Literal>] AssemblyProduct = "{PROJECTNAME}"
+    let [<Literal>] AssemblyTitle = "Waypoint.Cli"
+    let [<Literal>] AssemblyProduct = "Waypoint"
     let [<Literal>] AssemblyDescription = ""
     let [<Literal>] AssemblyVersion = "0.0.1"
     let [<Literal>] AssemblyFileVersion = "0.0.1"
