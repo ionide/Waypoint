@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1C3697A-14C7-44F4-BB2C-8F2874DD3C7D}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "{PROJECTNAME}", "src\{PROJECTNAME}\{PROJECTNAME}.fsproj", "{2B2AF76F-D332-43DF-81EA-B5410493FA8B}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Waypoint", "src\Waypoint\Waypoint.fsproj", "{2B2AF76F-D332-43DF-81EA-B5410493FA8B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "{PROJECTNAME}.Cli", "src\{PROJECTNAME}.Cli\{PROJECTNAME}.Cli.fsproj", "{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Waypoint.Cli", "src\Waypoint.Cli\Waypoint.Cli.fsproj", "{FB0DA14A-D15A-49F2-B693-DEFE8D67057B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DDCA53F5-9626-4C73-9BDA-21A28CD98993}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "{PROJECTNAME}.UnitTests", "tests\{PROJECTNAME}.UnitTests\{PROJECTNAME}.UnitTests.fsproj", "{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Waypoint.UnitTests", "tests\Waypoint.UnitTests\Waypoint.UnitTests.fsproj", "{04410448-2C89-48B9-AB7A-54FAC8CBDB0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

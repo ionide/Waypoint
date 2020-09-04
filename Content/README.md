@@ -1,4 +1,4 @@
-# {PROJECTNAME}
+# Waypoint
 
 ## How to get started
 
@@ -94,7 +94,7 @@ Thank you for contributing!
 
 ## Contributing and copyright
 
-The project is hosted on [GitHub](http://github.com/{GITOWNER}/{PROJECTNAME}) where you can report issues, fork
+The project is hosted on [GitHub](http://github.com/{GITOWNER}/Waypoint) where you can report issues, fork
 the project and submit pull requests.
 
 The library is available under [MIT license](LICENSE.md), which allows modification and redistribution for both commercial and non-commercial purposes.
